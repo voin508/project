@@ -1,0 +1,67 @@
+input[type="number"] {
+    width: 2em;
+}
+
+body {
+    background-image: url(https://ru-wotp.wgcdn.co/dcont/fb/image/hall_without_cal_1920_1080.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    background-color: #808080;
+    border: 2px solid #242121;
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5em
+}
+
+#end {
+    width: 7em;
+}
+
+#answer1, #answer2, #answer3, #answer4, #answer5, #answer, #answer {
+    color: #DC143C;
+}
+.message-bg {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.message {
+  margin: 15% 30%;
+  padding: 20px;
+  align-items: center;
+  border: 1px solid #151e23;
+  background-color: #C0C0C0;
+	width: 10em;
+}
+.close {
+  color: #000000;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+#formQuest {
+    position: fixed;
+    text-align:center;
+    background-color: gray;
+    border: 2px solid black;
+    top: 20%;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    height: 300px;
+    z-index: 99999999;
+}

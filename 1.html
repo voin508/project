@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang=ru>
+<head>
+    <meta charset="utf-8">
+    <title>TEST</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="data.js"></script>
+    <script src="scripts.js"></script>
+</head>
+<body>
+    <form name="AllForms">
+        <h1>Тест на танкиста</h1><br />
+        <ol>
+            <li>
+                <p>В каком году вышла World of Tanks?</p>
+                <p><input type="radio" name="a" value="radio_value">2009</p>
+                <p><input type="radio" name="a" value="radio_type">2010</p>
+                <p><input type="radio" name="a" value="radio_name">2011</p>
+                <p id="answer1" hidden>2010</p>
+            </li>
+            <li>
+                <p>Какиме снаряды есть у ИСА 3?</p>
+                <p><input type="checkbox" name="b">Бронебойные</p>
+                <p><input type="checkbox" name="b">Кумулятивные</p>
+                <p><input type="checkbox" name="b">Подкалиберные</p>
+                <p><input type="checkbox" name="b">Фугасные</p>
+                <p id="answer2" hidden>Бронебойные, Подкалиберные , Фугасные</p>
+            </li>
+            <li>
+                <p>В каком патче отменили Правило трех калибров?</p>
+                <p>
+                    <select name="attForm">
+                        <option value="empty">-</option>
+                        <option value="0.9.17">0.9.17</option>
+                        <option value="0.9.18">0.9.18</option>
+                        <option value="1.0.1">1.0.1</option>
+                    </select>
+                </p>
+                <p id="answer3" hidden>0.9.17</p>
+            </li>
+            <li>
+                <p>Сколько было Битв Блоггеров?</p>
+                <input type="number" name="number_value" min="0">
+                <p id="answer4" hidden>3</p>
+            </li>
+            <li>
+                <p>Название канала с самым большим кол-вом подпищиков в танках?</p>
+                <input type="text" name="text_value">
+                <p id="answer5" hidden>Джов</p>
+            </li>
+            <li>
+                <p>Составьте соответствие танков и класов, к которым они относятся</p>
+                <table id="first_table">
+                    <tr>
+                        <td>A. Е 100</td>
+                        <td>1. ПТ</td>
+                    </tr>
+                    <tr>
+                        <td>B. АМХ 13 105</td>
+                        <td>2. ТТ</td>
+                    </tr>
+                    <tr>
+                        <td>C. Т110Е4</td>
+                        <td>3. ЛТ</td>
+                    </tr>
+                </table>
+                <table id="second_table">
+                    <tr>
+                        <td>A</td>
+                        <td>B</td>
+                        <td>C</td>
+                    </tr>
+                    <tr>
+                        <td><input type="number" name="one" min="1" max="3"></td>
+                        <td><input type="number" name="two" min="1" max="3"></td>
+                        <td><input type="number" name="three" min="1" max="3"></td>
+                    </tr>
+                </table>
+                <p id="answer6" hidden>231</p>
+            </li>
+            <li id="additionalQ" hidden>
+                <p>Дополнительный вопрос:</p>
+                <p id="additionalTitle">?</p>
+                <input type="text" name="text_value_add">
+                <p id="answer7" hidden></p>
+            </li>
+        </ol>
+
+        <br>
+        <input type="button" id="end" value="Проверить" onclick="AllComplete()"><br>
+        <input type="button" id="addQ" value="Создать дополнительный вопрос" onclick="OpenAddForm()">
+
+
+        <div id="msgBg" class="message-bg">
+        <div id="msg" class="message">
+          <span class="close" onclick="CloseMsg()">&times;</span>
+
+          <div id="results">
+
+          </div>
+        </div>
+        </div>
+    </form>
+
+    <div id="formQuest" hidden>
+        <p>Введите вопрос:</p><br>
+        <input type="text" id="t_quest"><br>
+        <p>Введите правильный ответ:</p><br>
+        <input type="text" id="t_answer"><br>
+        <p id="answer" hidden></p><br><br>
+        <input type="button" id="createBtn" value="Создать вопрос" onclick="CreateQ()">
+    </div>
+</body>
+</html>
